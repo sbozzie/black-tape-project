@@ -1,0 +1,83 @@
+/* FLUID CONTAINER - @include container-fluid; */
+@mixin container-fluid {
+	margin-left : auto;
+	margin-right: auto;
+	width       : 100%;
+	@include clearfix;
+	@if $flexbox == 'yes' {
+		-webkit-box-flex      : 0;
+		-webkit-flex          : 0 1 auto;
+		-ms-flex              : 0 1 auto;
+		flex                  : 0 1 auto;
+		-webkit-flex-wrap     : wrap;
+		-ms-flex-wrap         : wrap;
+		flex-wrap             : wrap;
+		-webkit-box-orient    : horizontal;
+		-webkit-box-direction : normal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction    : row;
+		flex-direction        : row;
+		display               : -webkit-box;
+		display               : -webkit-flex;
+		display               : -ms-flexbox;
+		display               : flex;
+	}
+}
+/* FIXED WIDTH CONTAINER - @include container; */
+@mixin container {
+	/* - Import Base */
+	@include container-fluid;
+	/* - Add Fixed Widths */
+	@include break-min($sm-break) {
+		width: $sm-width;
+	}
+	@include break-min($md-break) {
+		width: $md-width;
+	}
+	@include break-min($lg-break) {
+		width: $lg-width;
+	}
+	@include break-min($xl-break) {
+		width: $xl-width;
+	}
+	@include break-min($xx-break) {
+		width: $xx-width;
+	}
+}
+/* COLUMN SETUP - @include columns; */
+@mixin columns {
+	float   : left;
+	position: relative;
+	@if $flexbox == 'yes' {
+		-webkit-box-flex   : 0;
+		-webkit-flex       : 0 0 auto;
+		-ms-flex           : 0 0 auto;
+		flex               : 0 0 auto;
+		-webkit-box-flex   : 0;
+		-webkit-flex-grow  : 0;
+		-ms-flex-positive  : 0;
+		flex-grow          : 0;
+		-webkit-flex-shrink: 0;
+		-ms-flex-negative  : 0;
+		flex-shrink        : 0;
+	}
+}
+/* GRID GENERATION - @include col(columns); */
+@mixin col($columns) {
+	width: ((100 / $grid-columns) * $columns) * 1%;
+	@if $flexbox == 'yes' {
+		-webkit-flex-basis     : ((100 / $grid-columns) * $columns) * 1%;
+		-ms-flex-preferred-size: ((100 / $grid-columns) * $columns) * 1%;
+		flex-basis             : ((100 / $grid-columns) * $columns) * 1%;
+	}
+}
+/* GRID OFFSETS - @include col-push(columns); */
+@mixin col-push($columns) {
+	right: ((100 / $grid-columns) * $columns) * 1%;
+}
+@mixin col-pull($columns) {
+	left: ((100 / $grid-columns) * $columns) * 1%;
+}
+@mixin col-offset($columns) {
+	margin-left: ((100 / $grid-columns) * $columns) * 1%;
+}

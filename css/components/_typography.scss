@@ -1,0 +1,138 @@
+/* HEADING SETUP */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family   : $font-heading;
+	font-weight   : $font-bold;
+	line-height   : 1.2;
+	margin-top    : 0;
+	text-rendering: optimizelegibility;
+	/* voodoo to enable ligatures and kerning */
+}
+/* HEADING SIZES */
+.heading1,
+h1 {
+	@include text-size($heading1);
+	@include text-margin($heading1);
+}
+.heading2,
+h2 {
+	@include text-size($heading2);
+	@include text-margin($heading2);
+}
+.heading3,
+h3 {
+	@include text-size($heading3);
+	@include text-margin($heading3);
+}
+.heading4,
+h4 {
+	@include text-size($heading4);
+	@include text-margin($heading4);
+}
+.heading5,
+h5 {
+	@include text-size($heading5);
+	@include text-margin($heading5);
+}
+.heading6,
+h6 {
+	@include text-size($heading6);
+	@include text-margin($heading6);
+}
+/* PARAGRAPHS */
+p {
+	margin-top: 0;
+	@include text-size($text-size);
+	@include text-margin($text-size);
+}
+/* EXTRA SIZES */
+.intro {
+	@include text-size($intro);
+	@include text-margin($intro);
+}
+.tera {
+	@include text-size($tera);
+	@include text-margin($tera);
+}
+.giga {
+	@include text-size($giga);
+	@include text-margin($giga);
+}
+.mega {
+	@include text-size($mega);
+	@include text-margin($mega);
+}
+/* SMALL TYPE */
+small {
+	display: block;
+	@include text-size($small);
+	@include text-margin($small);
+}
+/* LINKS */
+a {
+	color          : $text-color;
+	cursor         : pointer;
+	text-decoration: underline;
+	&:hover {
+		text-decoration: none;
+	}
+}
+/* ORDERED & UNORDERED LISTS */
+ol,
+ul {
+	margin-top  : 0;
+	padding-left: $grid-gutter;
+	@include text-margin($text-size);
+	ol,
+	ul {
+		margin-bottom: 5px;
+		margin-top   : 5px;
+		padding-left : $grid-gutter;
+	}
+	li {
+		@include text-size($text-size);
+	}
+}
+/* - List Style (OL) */
+ol {
+	list-style: decimal;
+	ol {
+		list-style-type: upper-roman;
+		ol {
+			list-style-type: lower-roman;
+		}
+	}
+}
+/* - List Style (UL) */
+ul {
+	list-style-type: square;
+	ul {
+		list-style: disc;
+		ul {
+			list-style-type: circle;
+		}
+	}
+}
+/* STRONG / BOLD */
+strong {
+	font-family: $font-heading;
+	font-weight: $font-bold;
+}
+/* SUBSCRIPT & SUPERSCRIPT */
+sub,
+sup {
+	font-size     : 75%;
+	line-height   : 0;
+	position      : relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5rem;
+}
+sub {
+	bottom: -0.25rem;
+}

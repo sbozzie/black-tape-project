@@ -1,0 +1,51 @@
+/* BUTTONS */
+.button {
+	background-color   : $black;
+	background-image   : none;
+	border             : 1px solid $black;
+	border-radius      : 0;
+	box-shadow         : none;
+	color              : $white;
+	cursor             : pointer;
+	display            : inline-block;
+	font-family        : $font-body;
+	font-weight        : $font-normal;
+	line-height        : 1;
+	margin             : 0;
+	padding            : ($grid-gutter / 2) $grid-gutter;
+	text-align         : center;
+	text-decoration    : none;
+	text-rendering     : optimizelegibility;
+	text-shadow        : none;
+	text-transform     : uppercase;
+	white-space        : nowrap;
+	-webkit-user-select: none;
+	-moz-user-select   : none;
+	-ms-user-select    : none;
+	user-select        : none;
+	-ms-touch-action   : manipulation;
+	touch-action       : manipulation;
+	-webkit-appearance : none;
+	-moz-appearance    : none;
+	appearance         : none;
+	@include text-size($text-size);
+	&:hover {
+		background-color: $white;
+		border-color    : lighten($black, 10%);
+		color           : lighten($black, 10%);
+	}
+	&--is-disabled {
+		cursor : default;
+		cursor : not-allowed;
+		opacity: 0.7;
+		&:hover {
+			background-color: $black;
+			border-color    : $black;
+			color           : $white;
+		}
+	}
+}
+/* - Button Extension */
+button {
+	@extend .button;
+}

@@ -1,0 +1,26 @@
+/* FONT */
+$text-base   : 100; // 112.5 = 18px
+$text-size   : 16 * ($text-base / 100);
+$line-height : 1.65;
+$text-margin : 24; // 24 or 48 recommended
+/* - Heading Sizes */
+$heading1    : 60;
+$heading2    : 48;
+$heading3    : 36;
+$heading4    : 24;
+$heading5    : 21;
+$heading6    : 18;
+/* - Extra Sizes */
+$tera        : 117;
+$giga        : 90;
+$mega        : 72;
+$intro       : 21;
+$small       : 14;
+/* - Font Color */
+$text-color  : $black;
+/* - Font Families */
+$font-heading: "Open Sans Bold";
+$font-body   : "Open Sans Regular";
+/* - Font Weights */
+$font-normal : 400;
+$font-bold   : 700;

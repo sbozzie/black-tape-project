@@ -1,0 +1,42 @@
+/* FONT FAMILY - @include font-face(family, name, weight, style); */
+@mixin font-face($family-name, $font-id, $font-name, $font-weight, $font-style) {
+	 @font-face{
+		font-family: "#{$family-name}";
+		src        : url("../fonts/#{$font-name}.eot");
+		src        : url("../fonts/#{$font-name}.eot?#iefix") format("embedded-opentype"), url("../fonts/#{$font-name}.woff") format("woff"), url("../fonts/#{$font-name}.ttf") format("truetype"), url("../fonts/#{$font-name}.svg##{$font-id}") format("svg");
+		font-style : $font-style;
+		font-weight: $font-weight;
+	}
+}
+/* PX TO REM FONT SIZE CALCULATOR - @include text-size(size); */
+@function calculateSize($size) {
+	$remSize: $size / $text-size;
+	@return $remSize;
+}
+@mixin text-size($size) {
+	font-size: $size + px;
+	font-size: calculateSize($size) * 1rem;
+}
+/* PX TO REM FONT MARGIN CALCULATOR - @include text-margin(size); */
+@function calculateMargin($size) {
+	$remMargin: $text-margin / $size;
+	@return $remMargin;
+}
+@mixin text-margin($size) {
+	margin-bottom: $text-margin + px;
+	margin-bottom: calculateMargin($size) * 1em;
+}
+/* UNSTYLED LIST - @include list-unstyled; */
+@mixin list-unstyled {
+	list-style  : none;
+	padding-left: 0;
+}
+/* INLINE LIST - @include list-inline; */
+@mixin list-inline {
+	list-style  : none;
+	padding-left: 0;
+	@include clearfix;
+	li {
+		float: left;
+	}
+}

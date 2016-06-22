@@ -1,0 +1,24 @@
+/* CLEARFIX - @include clearfix; */
+@mixin clearfix {
+	&:after,
+	&:before {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+/* MIXIN IMPORTS */
+@import "../mixins/_breakpoints";
+@import "../mixins/_grid";
+@import "../mixins/_typography";
+/* CONTAINER OR COLUMN PADDING - @include padding; */
+@mixin padding {
+	padding-left : ($grid-gutter / 3);
+	padding-right: ($grid-gutter / 3);
+	@include break-min($sm-break) {
+		padding-left : ($grid-gutter / 2);
+		padding-right: ($grid-gutter / 2);
+	}
+}

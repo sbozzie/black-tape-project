@@ -1,0 +1,32 @@
+/* PRINT STYLES */
+@media print {
+	* {
+		background : transparent !important;
+		box-shadow : none !important;
+		color      : #000000 !important;
+		/*black prints faster*/
+		text-shadow: none !important;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		page-break-after          : avoid;
+		-webkit-column-break-after: avoid;
+		break-after               : avoid;
+		/*ensure a new page will start with a heading not leaving it on the page before*/
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		orphans: 3;
+		widows : 3;
+		/*ensure at least 3 lines of text go onto new page instead of 1*/
+	}
+}

@@ -1,2 +1,7 @@
-.sass-cache/
+# force compilation & minification of CSS
+*.css
 *.css.map
+*.min.css
+
+# force compilation & minification of JS
+*.min.js

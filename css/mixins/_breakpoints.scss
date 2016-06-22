@@ -1,0 +1,18 @@
+/* BREAKPOINTS (MAX WIDTH) - @include break-max(width) {} */
+@mixin break-max($width) {
+	 @media (max-width: $width - 1){
+		@content;
+	}
+}
+/* BREAKPOINTS (MIN WIDTH) - @include break-min(width) {} */
+@mixin break-min($width) {
+	 @media (min-width: $width){
+		@content;
+	}
+}
+/* BREAKPOINTS (THIS ONLY) - @include break-only(min-width, max-width) {} */
+@mixin break-between($min-width, $max-width) {
+	 @media (min-width: $width) and (max-width: $width - 1){
+		@content;
+	}
+}

@@ -1,0 +1,46 @@
+/* BODY WRAPPER */
+.body-wrapper {
+	@include container-fluid;
+	border-left      : 1px solid red;
+	border-right     : 1px solid red;
+	background-repeat: repeat-y;
+	background-size  : 100% 1.2em;
+	background-image : -webkit-linear-gradient(top, $grey 0, rgba(255, 255, 255, 0) 1px);
+	background-image : linear-gradient(to bottom, $grey 0, rgba(255, 255, 255, 0) 1px);
+}
+/* CONTENT WRAPPER */
+.content-wrapper {
+	@include container;
+	@include padding;
+	border-left : 1px solid red;
+	border-right: 1px solid red;
+}
+/* STYLEGUIDE TEST */
+.col-test {
+	@include columns;
+	@include col(12);
+	@include padding;
+	border: 1px solid red;
+	@include break-min($md-break) {
+		/**/
+		@include col(6);
+		@if $flexbox == 'yes' {
+			&:nth-of-type(5) {
+				@include col-pull(6);
+			}
+		}
+	}
+}
+/* IE9 FIX */
+.lt-ie10 {
+	.content-wrapper {
+		max-width: $xx-width;
+	}
+	.col-test {
+		@if $flexbox == 'yes' {
+			&:nth-of-type(5) {
+				@include col-pull(0);
+			}
+		}
+	}
+}
