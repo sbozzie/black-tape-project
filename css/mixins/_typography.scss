@@ -9,22 +9,17 @@
 	}
 }
 /* PX TO REM FONT SIZE CALCULATOR - @include text-size(size); */
-@function calculateSize($size) {
-	$remSize: $size / $text-size;
-	@return $remSize;
-}
 @mixin text-size($size) {
+	$remSize : $size / $text-size;
 	font-size: $size + px;
-	font-size: calculateSize($size) * 1rem;
+	font-size: $remSize * 1rem;
 }
 /* PX TO REM FONT MARGIN CALCULATOR - @include text-margin(size); */
-@function calculateMargin($size) {
-	$remMargin: $text-margin / $size;
-	@return $remMargin;
-}
 @mixin text-margin($size) {
-	margin-bottom: $text-margin + px;
-	margin-bottom: calculateMargin($size) * 1em;
+	$remValue    : ($text-size * $line-height) / $size;
+	$pixelValue  : $remValue * $text-size;
+	margin-bottom: $pixelValue * 1px;
+	margin-bottom: $remValue * 1rem;
 }
 /* UNSTYLED LIST - @include list-unstyled; */
 @mixin list-unstyled {

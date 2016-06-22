@@ -44,7 +44,7 @@ h6 {
 	@include text-margin($heading6);
 }
 /* PARAGRAPHS */
-p {
+p:not(.intro) {
 	margin-top: 0;
 	@include text-size($text-size);
 	@include text-margin($text-size);

@@ -4,7 +4,7 @@
 	border-left      : 1px solid red;
 	border-right     : 1px solid red;
 	background-repeat: repeat-y;
-	background-size  : 100% 1.2em;
+	background-size  : 100% ($line-height * 1rem);
 	background-image : -webkit-linear-gradient(top, $grey 0, rgba(255, 255, 255, 0) 1px);
 	background-image : linear-gradient(to bottom, $grey 0, rgba(255, 255, 255, 0) 1px);
 }
