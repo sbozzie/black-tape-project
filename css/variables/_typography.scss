@@ -1,26 +1,27 @@
 /* FONT */
-$text-base   : 112.5; // 112.5 = 18px
+$text-base   : 100; // 112.5% (18px) 100% (16px) 62.5% (14px)
 $text-size   : 16 * ($text-base / 100);
 $line-height : 1.65;
-$text-margin : 24; // 24 or 48 recommended
 /* - Heading Sizes */
-$heading1    : 60;
-$heading2    : 48;
-$heading3    : 36;
-$heading4    : 24;
-$heading5    : 21;
-$heading6    : 18;
+$h1          : 60;
+$h2          : 48;
+$h3          : 36;
+$h4          : 24;
+$h5          : 21;
+$h6          : 18;
 /* - Extra Sizes */
 $tera        : 117;
 $giga        : 90;
 $mega        : 72;
 $intro       : 21;
 $small       : 14;
+$paragraph   : $text-size;
 /* - Font Color */
 $text-color  : $black;
+$link-color  : $brand1;
 /* - Font Families */
 $font-heading: "Open Sans Bold";
 $font-body   : "Open Sans Regular";
 /* - Font Weights */
-$font-normal : 400;
-$font-bold   : 700;
+$normal      : 400;
+$bold        : 700;

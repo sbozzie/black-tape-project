@@ -3,9 +3,9 @@
 @import "base/_variables";
 @import "base/_mixins";
 /* FONT FAMILY - Open Sans Bold */
-@include font-face($font-heading, open_sansbold, opensans-bold-webfont, $font-bold, normal);
+@include font-face($font-heading, open_sansbold, opensans-bold-webfont, $bold, normal);
 /* FONT FAMILY - Open Sans Regular */
-@include font-face($font-body, open_sansregular, opensans-regular-webfont, $font-normal, normal);
+@include font-face($font-body, open_sansregular, opensans-regular-webfont, $normal, normal);
 /* PAGE SETUP */
 @import "base/_setup";
 /* SITE COMPONENTS */

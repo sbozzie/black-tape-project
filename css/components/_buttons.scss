@@ -9,10 +9,10 @@
 	cursor             : pointer;
 	display            : inline-block;
 	font-family        : $font-body;
-	font-weight        : $font-normal;
+	font-weight        : $normal;
 	line-height        : 1;
 	margin             : 0;
-	padding            : ($grid-gutter / 2) $grid-gutter;
+	padding            : ($gutter / 2) $gutter;
 	text-align         : center;
 	text-decoration    : none;
 	text-rendering     : optimizelegibility;
@@ -28,20 +28,28 @@
 	-webkit-appearance : none;
 	-moz-appearance    : none;
 	appearance         : none;
-	@include text-size($text-size);
+	@include text-size($paragraph);
 	&:hover {
-		background-color: $white;
+		background-color: lighten($black, 10%);
 		border-color    : lighten($black, 10%);
-		color           : lighten($black, 10%);
 	}
-	&--is-disabled {
+	&.is-disabled {
 		cursor : default;
 		cursor : not-allowed;
-		opacity: 0.7;
+		opacity: 0.75;
 		&:hover {
 			background-color: $black;
 			border-color    : $black;
 			color           : $white;
+		}
+	}
+	&--primary {
+		background-color: $brand3;
+		border-color    : $brand3;
+		color           : $white;
+		&:hover {
+			background-color: lighten($brand3, 10%);
+			border-color    : lighten($brand3, 10%);
 		}
 	}
 }

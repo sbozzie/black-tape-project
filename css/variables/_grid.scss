@@ -1,20 +1,21 @@
 /* GRID */
-$grid-columns: 12;
-$grid-gutter : 30px;
-/* - Phablet Breakpoint (SM) */
-$sm-break    : 544px;
-$sm-width    : 520px;
-/* - Tablet Breakpoint (MD) */
-$md-break    : 768px;
-$md-width    : 720px;
-/* - Desktop Breakpoint (LG) */
-$lg-break    : 992px;
-$lg-width    : 960px;
-/* - 1080P Breakpoint (XL) */
-$xl-break    : 1200px;
-$xl-width    : 1156px;
-/* - 1440P Breakpoint (XX) */
-$xx-break    : 1440px;
-$xx-width    : 1366px;
+$columns : 12;
+$gutter  : 30px;
 /* FLEXBOX (ON/OFF) */
-$flexbox     : "yes";
+$flexbox : "yes";
+/* BREAKPOINTS */
+/* - Phablet Breakpoint (SM) */
+$sm-break: 544px;
+$sm-width: 520px;
+/* - Tablet Breakpoint (MD) */
+$md-break: 768px;
+$md-width: 720px;
+/* - Desktop Breakpoint (LG) */
+$lg-break: 992px;
+$lg-width: 960px;
+/* - 1080P Breakpoint (XL) */
+$xl-break: 1200px;
+$xl-width: 1156px;
+/* - 1440P Breakpoint (XX) */
+$xx-break: 1440px;
+$xx-width: 1366px;

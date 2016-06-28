@@ -6,7 +6,7 @@ h4,
 h5,
 h6 {
 	font-family   : $font-heading;
-	font-weight   : $font-bold;
+	font-weight   : $bold;
 	line-height   : 1.2;
 	margin-top    : 0;
 	text-rendering: optimizelegibility;
@@ -15,39 +15,39 @@ h6 {
 /* HEADING SIZES */
 .heading1,
 h1 {
-	@include text-size($heading1);
-	@include text-margin($heading1);
+	@include text-size($h1);
+	@include text-margin($h1);
 }
 .heading2,
 h2 {
-	@include text-size($heading2);
-	@include text-margin($heading2);
+	@include text-size($h2);
+	@include text-margin($h2);
 }
 .heading3,
 h3 {
-	@include text-size($heading3);
-	@include text-margin($heading3);
+	@include text-size($h3);
+	@include text-margin($h3);
 }
 .heading4,
 h4 {
-	@include text-size($heading4);
-	@include text-margin($heading4);
+	@include text-size($h4);
+	@include text-margin($h4);
 }
 .heading5,
 h5 {
-	@include text-size($heading5);
-	@include text-margin($heading5);
+	@include text-size($h5);
+	@include text-margin($h5);
 }
 .heading6,
 h6 {
-	@include text-size($heading6);
-	@include text-margin($heading6);
+	@include text-size($h6);
+	@include text-margin($h6);
 }
 /* PARAGRAPHS */
 p:not(.intro) {
+	@include text-size($paragraph);
+	@include text-margin($paragraph);
 	margin-top: 0;
-	@include text-size($text-size);
-	@include text-margin($text-size);
 }
 /* EXTRA SIZES */
 .intro {
@@ -68,13 +68,13 @@ p:not(.intro) {
 }
 /* SMALL TYPE */
 small {
-	display: block;
 	@include text-size($small);
 	@include text-margin($small);
+	display: block;
 }
 /* LINKS */
 a {
-	color          : $text-color;
+	color          : $link-color;
 	cursor         : pointer;
 	text-decoration: underline;
 	&:hover {
@@ -84,17 +84,17 @@ a {
 /* ORDERED & UNORDERED LISTS */
 ol,
 ul {
+	@include text-margin($paragraph);
 	margin-top  : 0;
-	padding-left: $grid-gutter;
-	@include text-margin($text-size);
+	padding-left: $gutter;
 	ol,
 	ul {
 		margin-bottom: 5px;
 		margin-top   : 5px;
-		padding-left : $grid-gutter;
+		padding-left : $gutter;
 	}
 	li {
-		@include text-size($text-size);
+		@include text-size($paragraph);
 	}
 }
 /* - List Style (OL) */
@@ -120,7 +120,7 @@ ul {
 /* STRONG / BOLD */
 strong {
 	font-family: $font-heading;
-	font-weight: $font-bold;
+	font-weight: $bold;
 }
 /* SUBSCRIPT & SUPERSCRIPT */
 sub,
