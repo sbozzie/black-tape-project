@@ -1,46 +1,38 @@
 /* BODY WRAPPER */
 .body-wrapper {
 	@include container-fluid;
-	border-left      : 1px solid red;
-	border-right     : 1px solid red;
 	background-repeat: repeat-y;
 	background-size  : 100% ($line-height * 1rem);
-	background-image : -webkit-linear-gradient(top, $grey 0, rgba(255, 255, 255, 0) 1px);
-	background-image : linear-gradient(to bottom, $grey 0, rgba(255, 255, 255, 0) 1px);
+	border-left      : 1px solid $gray;
+	border-right     : 1px solid $gray;
+	background-image : -webkit-linear-gradient(top, $grey 0, transparentize($white, 1) 2px);
+	background-image : linear-gradient(to bottom, $grey 0, transparentize($white, 1) 2px);
 }
 /* CONTENT WRAPPER */
 .content-wrapper {
 	@include container;
-	@include padding;
-	border-left : 1px solid red;
-	border-right: 1px solid red;
+	@include padding(side);
+	@include padding(bottom);
+	@include padding(top);
+	border-left : 3px solid $gray;
+	border-right: 3px solid $gray;
+	/* IE9 FIX */
+	.lt-ie10 & {
+		max-width: $xx-width;
+	}
 }
-/* STYLEGUIDE TEST */
+/* CONTENT TEST */
 .col-test {
 	@include columns;
 	@include col(12);
-	@include padding;
-	border: 1px solid red;
+	@include padding(side);
+	border: 1px solid $gray;
 	@include break-min($md-break) {
 		/**/
 		@include col(6);
-		@if $flexbox == 'yes' {
-			&:nth-of-type(5) {
-				@include col-pull(6);
-			}
-		}
 	}
-}
-/* IE9 FIX */
-.lt-ie10 {
-	.content-wrapper {
-		max-width: $xx-width;
-	}
-	.col-test {
-		@if $flexbox == 'yes' {
-			&:nth-of-type(5) {
-				@include col-pull(0);
-			}
-		}
+	&__intro {
+		@include columns;
+		@include col(12);
 	}
 }

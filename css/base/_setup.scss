@@ -6,7 +6,7 @@ html {
 	overflow-y                 : scroll;
 	-ms-overflow-style         : scrollbar;
 	/* always force scrollbar */
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparentize($white, 1);
 	-webkit-tap-highlight-color: transparent;
 	/* disable tap highlight */
 }
@@ -39,9 +39,11 @@ html {
 	-moz-osx-font-smoothing: grayscale;
 }
 body {
-	background      : url("#{$img-path}concrete.png") repeat top left;
-	background-color: $body-color;
-	margin          : 0;
+	background-color   : $body-color;
+	background-image   : url("#{$img-path}concrete.png");
+	background-position: top left;
+	background-repeat  : repeat;
+	margin             : 0;
 	@include text-size($text-size);
 }
 /* RESPONSIVE IMAGES */

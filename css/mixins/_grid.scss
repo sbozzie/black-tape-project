@@ -81,3 +81,38 @@
 @mixin col-offset($col) {
 	margin-left: ((100 / $columns) * $col) * 1%;
 }
+/* SIDE-PADDING - @include padding; */
+@mixin padding($position) {
+	@if $position == 'side' {
+		padding-left : ($gutter / 3);
+		padding-right: ($gutter / 3);
+		@include break-min($md-break) {
+			padding-left : ($gutter / 2);
+			padding-right: ($gutter / 2);
+		}
+	}
+	@else if $position == 'left' {
+		padding-left: ($gutter / 3);
+		@include break-min($md-break) {
+			padding-left: ($gutter / 2);
+		}
+	}
+	@else if $position == 'right' {
+		padding-right: ($gutter / 3);
+		@include break-min($md-break) {
+			padding-right: ($gutter / 2);
+		}
+	}
+	@else if $position == 'top' {
+		padding-top: $gutter;
+		@include break-min($md-break) {
+			padding-top: ($gutter * 2);
+		}
+	}
+	@else if $position == 'bottom' {
+		padding-bottom: $gutter;
+		@include break-min($md-break) {
+			padding-bottom: ($gutter * 2);
+		}
+	}
+}

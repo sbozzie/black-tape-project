@@ -350,6 +350,7 @@ textarea {
 ::-webkit-input-placeholder {
 	color  : inherit;
 	opacity: 0.54;
+	filter: alpha(opacity=0.54);
 }
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.

@@ -37,6 +37,7 @@
 		cursor : default;
 		cursor : not-allowed;
 		opacity: 0.75;
+		filter: alpha(opacity=0.75);
 		&:hover {
 			background-color: $black;
 			border-color    : $black;
@@ -52,8 +53,4 @@
 			border-color    : lighten($brand3, 10%);
 		}
 	}
-}
-/* - Button Extension */
-button {
-	@extend .button;
 }

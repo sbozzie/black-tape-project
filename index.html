@@ -1,8 +1,8 @@
 <!doctype html>
 
-<!--[if lt IE 10 ]> <html class="lt-ie10 no-js" lang="en"> <![endif]-->
+<!--[if lt IE 10 ]> <html class="lt-ie10 no-js no-svg" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!-->
-<html class="no-js" lang="en">
+<html class="no-js no-svg" lang="en">
 	<!--<![endif]-->
 
 	<head>
@@ -38,22 +38,6 @@
 		<meta name="HandheldFriendly" content="True"/>
 
 		<!-- favicons -->
-		<link href="apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57"/>
-		<link href="apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60"/>
-		<link href="apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
-		<link href="apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76"/>
-		<link href="apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
-		<link href="apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120"/>
-		<link href="apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144"/>
-		<link href="apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152"/>
-		<link href="apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"/>
-		<link href="favicon-16x16.png" rel="icon" type="image/png" sizes="16x16"/>
-		<link href="favicon-194x194.png" rel="icon" type="image/png" sizes="194x194"/>
-		<link href="favicon-32x32.png" rel="icon" type="image/png" sizes="32x32"/>
-		<link href="favicon-96x96.png" rel="icon" type="image/png" sizes="96x96"/>
-		<link href="android-chrome-192x192.png" rel="icon" type="image/png" sizes="192x192"/>
-		<link href="safari-pinned-tab.svg" rel="mask-icon" color="#e23f7b"/>
-		<meta name="msapplication-TileImage" content="mstile-144x144.png"/>
 
 		<!-- app settings -->
 		<link href="manifest.json" rel="manifest"/>
@@ -65,17 +49,22 @@
 		<meta name="msapplication-TileColor" content="#e23f7b"/>
 		<meta name="theme-color" content="#e23f7b"/>
 		<meta name="format-detection" content="telephone=no"/>
-
-		<!-- disable tap highlight on IE -->
 		<meta name="msapplication-tap-highlight" content="no"/>
-
-		<!-- CSS -->
-		<link rel="stylesheet" href="css/styles.min.css"/>
 
 		<!-- detect javascript support -->
 		<script>
 			document.documentElement.className = document.documentElement.className.replace("no-js", "js");
 		</script>
+
+		<!-- detect SVG support -->
+		<script>
+			if (document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1")) {
+				document.documentElement.className = document.documentElement.className.replace("no-svg", "svg");
+			}
+		</script>
+
+		<!-- CSS -->
+		<link href="css/styles.min.css" rel="stylesheet"/>
 
 	</head>
 
@@ -86,8 +75,10 @@
 			<div class="content-wrapper">
 
 				<div class="col-test">
-					<h1>Vivamus volutpat tellus ut condimentum imperdiet.</h1>
-					<p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis aliquet urna, non maximus enim feugiat vestibulum. Aenean euismod augue tellus.</p>
+					<div class="col-test__intro">
+						<h1>Vivamus volutpat tellus ut condimentum imperdiet.</h1>
+						<p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis aliquet urna, non maximus enim feugiat vestibulum. Aenean euismod augue tellus.</p>
+					</div>
 					<p>Integer elementum volutpat augue a porttitor. Morbi
 						<a>et facilisis</a>
 						leo. Phasellus a elementum lacus. Suspendisse at H<sub>2</sub>O feugiat est, quis volutpat ex.</p>
@@ -143,8 +134,8 @@
 						<li>Id efficitur sapien tincidunt et</li>
 						<li>Id efficitur sapien tincidunt et</li>
 					</ol>
-					<button>Button Style</button>
-					<button class="button--primary">Button Style</button>
+					<button class="button">Button Style</button>
+					<button class="button button--primary">Primary Style</button>
 					<a class="button is-disabled">Disabled Style</a>
 				</div>
 				<div class="col-test">
@@ -179,9 +170,5 @@
 		<script src="js/functions.min.js"></script>
 
 	</body>
-
-</html>
-
-</body>
 
 </html>

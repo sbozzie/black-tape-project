@@ -8,12 +8,6 @@
 		font-weight: $font-weight;
 	}
 }
-/* PX TO REM FONT SIZE CALCULATOR - @include text-size(size); */
-@mixin text-size($size) {
-	$remSize : $size / $text-size;
-	font-size: $size + px;
-	font-size: $remSize * 1rem;
-}
 /* PX TO REM FONT MARGIN CALCULATOR - @include text-margin(size); */
 @mixin text-margin($size) {
 	$remValue    : ($text-size * $line-height) / $size;
@@ -21,10 +15,11 @@
 	margin-bottom: $pixelValue * 1px;
 	margin-bottom: $remValue * 1rem;
 }
-/* UNSTYLED LIST - @include list-unstyled; */
-@mixin list-unstyled {
-	list-style  : none;
-	padding-left: 0;
+/* PX TO REM FONT SIZE CALCULATOR - @include text-size(size); */
+@mixin text-size($size) {
+	$remSize : $size / $text-size;
+	font-size: $size + px;
+	font-size: $remSize * 1rem;
 }
 /* INLINE LIST - @include list-inline; */
 @mixin list-inline {
@@ -34,4 +29,9 @@
 	li {
 		float: left;
 	}
+}
+/* UNSTYLED LIST - @include list-unstyled; */
+@mixin list-unstyled {
+	list-style  : none;
+	padding-left: 0;
 }

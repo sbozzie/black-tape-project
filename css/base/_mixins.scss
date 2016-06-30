@@ -13,12 +13,3 @@
 @import "../mixins/_breakpoints";
 @import "../mixins/_grid";
 @import "../mixins/_typography";
-/* CONTAINER OR COLUMN PADDING - @include padding; */
-@mixin padding {
-	padding-left : ($gutter / 3);
-	padding-right: ($gutter / 3);
-	@include break-min($sm-break) {
-		padding-left : ($gutter / 2);
-		padding-right: ($gutter / 2);
-	}
-}
