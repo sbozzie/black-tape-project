@@ -1,5 +1,6 @@
 /* BUTTONS */
 .button {
+	@include text-size($paragraph);
 	background-color   : $black;
 	background-image   : none;
 	border             : 1px solid $black;
@@ -28,7 +29,6 @@
 	-webkit-appearance : none;
 	-moz-appearance    : none;
 	appearance         : none;
-	@include text-size($paragraph);
 	&:hover {
 		background-color: lighten($black, 10%);
 		border-color    : lighten($black, 10%);

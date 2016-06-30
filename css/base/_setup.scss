@@ -39,12 +39,12 @@ html {
 	-moz-osx-font-smoothing: grayscale;
 }
 body {
+	@include text-size($text-size);
 	background-color   : $body-color;
 	background-image   : url("#{$img-path}concrete.png");
 	background-position: top left;
 	background-repeat  : repeat;
 	margin             : 0;
-	@include text-size($text-size);
 }
 /* RESPONSIVE IMAGES */
 img {
