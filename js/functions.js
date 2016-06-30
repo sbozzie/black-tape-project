@@ -61,7 +61,7 @@ $(document).ready(function() {
 
 	});
 
-	$(window).smartresize(function() {
+	$(window).smartscroll(function() {
 
 	}); //END window scroll
 

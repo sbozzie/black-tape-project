@@ -33,6 +33,10 @@
 		background-color: lighten($black, 10%);
 		border-color    : lighten($black, 10%);
 	}
+	&:focus {
+		outline: 0;
+		border : 1px dotted rgba(255, 255, 255, 0.5);
+	}
 	&.is-disabled {
 		cursor : default;
 		cursor : not-allowed;
