@@ -1,20 +1,61 @@
-/* DOCUMENT SETUP */
-html {
-	box-sizing                 : border-box;
-	font-size                  : $text-size + px;
-	font-size                  : $text-base + %;
-	overflow-y                 : scroll;
-	-ms-overflow-style         : scrollbar;
-	/* always force scrollbar */
-	-webkit-tap-highlight-color: transparentize($white, 1);
-	-webkit-tap-highlight-color: transparent;
-	/* disable tap highlight */
+/* RESET ALL ELEMENTS */
+* {
+	background-repeat: no-repeat;
+	padding          : 0;
+	margin           : 0;
 }
 /* INHERIT BOX-SIZING */
 *,
 :after,
 :before {
 	box-sizing: inherit;
+}
+/* INHERIT TEXT-DECORATION AND VERTICAL ALIGN */
+:after,
+:before {
+	text-decoration: inherit;
+	vertical-align : inherit;
+}
+/* SET HTML5 ELEMENT DISPLAY */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+/* OTHER ELEMENT DISPLAY */
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+}
+progress {
+	vertical-align: baseline;
+}
+/* DOCUMENT SETUP */
+html {
+	box-sizing                 : border-box;
+	font-size                  : $text-size + px;
+	font-size                  : $text-base + %;
+	font-family                : sans-serif;
+	/* always force scrollbar */
+	overflow-y                 : scroll;
+	-ms-overflow-style         : scrollbar;
+	/* disable tap highlight */
+	-webkit-tap-highlight-color: transparentize($white, 1);
+	-webkit-tap-highlight-color: transparent;
+	/* iOS 8+ and IE */
+	-ms-text-size-adjust       : 100%;
+	-webkit-text-size-adjust   : 100%;
 }
 /* BODY & HTML */
 body,
@@ -45,10 +86,21 @@ body {
 	background-position: top left;
 	background-repeat  : repeat;
 	margin             : 0;
+	min-width          : 320px;
+	padding            : 0;
 }
 /* RESPONSIVE IMAGES */
 img {
-	display  : block;
-	height   : auto;
-	max-width: 100%;
+	border                : none;
+	display               : block;
+	height                : auto;
+	max-width             : 100%;
+	-ms-interpolation-mode: bicubic;
+}
+/* TEXT SELECTION */
+::-moz-selection {
+	@include selection-hightlight;
+}
+::selection {
+	@include selection-hightlight;
 }

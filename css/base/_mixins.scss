@@ -10,6 +10,8 @@
 	}
 }
 /* MIXIN IMPORTS */
+@import "../mixins/_animations";
 @import "../mixins/_breakpoints";
 @import "../mixins/_grid";
+@import "../mixins/_layout";
 @import "../mixins/_typography";

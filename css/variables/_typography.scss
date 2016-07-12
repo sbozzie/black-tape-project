@@ -1,28 +1,31 @@
 /* FONT */
-$text-base   : 100; // 112.5% (18px) 100% (16px) 62.5% (14px)
-$text-size   : 16 * ($text-base / 100);
-$line-height : 1.65;
-$title-height: 1.2;
-/* - Heading Sizes */
-$h1          : 60;
-$h2          : 48;
-$h3          : 36;
-$h4          : 24;
-$h5          : 21;
-$h6          : 18;
+$text-base      : 100; // 112.5% (18px) 100% (16px) 62.5% (14px)
+$text-size      : 16 * ($text-base / 100);
+$line-height    : 1.65;
+$title-height   : 1.2;
+/* - Body Sizes */
+$paragraph      : $text-size;
+$intro          : 19;
+$small          : 14;
+/* - Heading Sizes (large) */
+$h1             : 60;
+$h2             : 48;
+$h3             : 36;
+$h4             : 24;
+$h5             : 21;
+$h6             : 18;
 /* - Extra Sizes */
-$tera        : 117;
-$giga        : 90;
-$mega        : 72;
-$intro       : 21;
-$small       : 14;
-$paragraph   : $text-size;
+$tera           : 117;
+$giga           : 90;
+$mega           : 72;
 /* - Font Color */
-$text-color  : $black;
-$link-color  : $brand1;
+$link-color     : $brand1;
+$text-color     : $black;
+/* - Selection Highlight */
+$highlight-color: #b3d4fc;
 /* - Font Families */
-$font-heading: "Open Sans Bold";
-$font-body   : "Open Sans Regular";
+$font-heading   : "Open Sans Bold";
+$font-body      : "Open Sans Regular";
 /* - Font Weights */
-$normal      : 400;
-$bold        : 700;
+$normal         : 400;
+$bold           : 700;

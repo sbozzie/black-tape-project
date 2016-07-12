@@ -5,12 +5,10 @@ h3,
 h4,
 h5,
 h6 {
-	font-family   : $font-heading;
-	font-weight   : $bold;
+	@include font-bold;
 	line-height   : $title-height;
 	margin-top    : 0;
 	text-rendering: optimizelegibility;
-	/* voodoo to enable ligatures and kerning */
 }
 /* HEADING SIZES */
 .heading1,
@@ -44,7 +42,7 @@ h6 {
 	@include text-margin($h6);
 }
 /* PARAGRAPHS */
-p:not(.intro) {
+p {
 	@include text-size($paragraph);
 	@include text-margin($paragraph);
 	margin-top: 0;
@@ -74,11 +72,20 @@ small {
 }
 /* LINKS */
 a {
-	color          : $link-color;
-	cursor         : pointer;
-	text-decoration: underline;
+	background-color            : transparent;
+	color                       : $link-color;
+	cursor                      : pointer;
+	text-decoration             : underline;
+	/* remove gaps in links underline in iOS 8+ and safari 8+ */
+	-webkit-text-decoration-skip: objects;
+	&:focus,
 	&:hover {
+		color          : $link-color;
 		text-decoration: none;
+	}
+	&:active,
+	&:hover {
+		outline-width: 0;
 	}
 }
 /* ORDERED & UNORDERED LISTS */
@@ -117,12 +124,17 @@ ul {
 		}
 	}
 }
-/* STRONG / BOLD */
-strong {
-	font-family: $font-heading;
-	font-weight: $bold;
+/* HORIZONTAL RULE */
+hr {
+	box-sizing: content-box;
+	height    : 0;
+	overflow  : visible;
 }
-/* SUBSCRIPT & SUPERSCRIPT */
+/* STRONG (BOLD) */
+strong {
+	@include font-bold;
+}
+/* SUBSCRIPT AND SUPERSCRIPT */
 sub,
 sup {
 	font-size     : 75%;
@@ -130,9 +142,9 @@ sup {
 	position      : relative;
 	vertical-align: baseline;
 }
-sup {
-	top: -0.5rem;
-}
 sub {
-	bottom: -0.25rem;
+	bottom: -0.25em;
+}
+sup {
+	top: -0.5em;
 }

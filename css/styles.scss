@@ -1,5 +1,4 @@
 /* BASE */
-@import "base/_reset";
 @import "base/_variables";
 @import "base/_mixins";
 /* FONT FAMILY - Open Sans Bold */
@@ -8,9 +7,11 @@
 @include font-face($font-body, open_sansregular, opensans-regular-webfont, $normal, normal);
 /* PAGE SETUP */
 @import "base/_setup";
-/* SITE COMPONENTS */
 @import "components/_typography";
+/* SITE COMPONENTS */
 @import "components/_buttons";
+@import "components/_forms";
+@import "components/_tables";
 /* ELEMENT CREATION */
 @import "elements/_page";
 /* PRINT */

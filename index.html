@@ -40,7 +40,6 @@
 		<!-- favicons -->
 
 		<!-- app settings -->
-		<link href="manifest.json" rel="manifest"/>
 		<meta name="apple-mobile-web-app-title" content="Black Tape Project"/>
 		<meta name="application-name" content="Black Tape Project"/>
 		<meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -135,11 +134,44 @@
 						<li>Id efficitur sapien tincidunt et</li>
 					</ol>
 					<button class="button">Button Style</button>
-					<button class="button button--primary">Primary Style</button>
 					<a class="button is-disabled">Disabled Style</a>
 				</div>
 				<div class="col-test">
-					<p>Second Column</p>
+					<fieldset>
+						<form>
+							<div>
+								<label for="enterText">Test input element</label>
+								<input id="enterText" placeholder="Please enter your text" type="text" name="enterText"/>
+							</div>
+							<div>
+								<label for="enterTextarea">Test textarea element</label>
+								<textarea id="enterTextarea" placeholder="Please enter your text" type="text" name="enterTextarea"></textarea>
+							</div>
+							<div>
+								<label for="enterSelect">Select Service</label>
+								<select id="enterSelect" name="enterSelect">
+									<option>Option #1</option>
+									<option>Option #2</option>
+									<option>Option #3</option>
+									<option>Option #4</option>
+									<option>Option #5</option>
+								</select>
+							</div>
+							<div>
+								<label for="radio1">Radio #1</label>
+								<input id="radio1" type="radio" name="enterRadio" value="radio1"/>
+								<label for="radio2">Radio #2</label>
+								<input id="radio2" type="radio" name="enterRadio" value="radio2"/>
+							</div>
+							<div>
+								<label for="checkbox1">Checkbox #1</label>
+								<input id="checkbox1" type="checkbox" name="enterCheckbox" value="checkbox1"/>
+								<label for="checkbox2">Checkbox #2</label>
+								<input id="checkbox2" type="checkbox" name="enterCheckbox" value="checkbox2"/>
+							</div>
+						</form>
+					</fieldset>
+					<button class="button button--primary">Primary Style</button>
 				</div>
 				<div class="col-test">
 					<p>Third Column</p>

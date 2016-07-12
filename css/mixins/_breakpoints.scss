@@ -12,7 +12,7 @@
 }
 /* BREAKPOINTS (THIS ONLY) - @include break-only(min-width, max-width) {} */
 @mixin break-between($min-width, $max-width) {
-	 @media (min-width: $width) and (max-width: $width - 1){
+	 @media (min-width: $min-width) and (max-width: $max-width - 1){
 		@content;
 	}
 }

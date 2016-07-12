@@ -13,9 +13,11 @@
 	font-weight        : $normal;
 	line-height        : 1;
 	margin             : 0;
+	overflow           : visible;
 	padding            : ($gutter / 2) $gutter;
 	text-align         : center;
 	text-decoration    : none;
+	/* voodoo to enable ligatures and kerning */
 	text-rendering     : optimizelegibility;
 	text-shadow        : none;
 	text-transform     : uppercase;
@@ -29,19 +31,23 @@
 	-webkit-appearance : none;
 	-moz-appearance    : none;
 	appearance         : none;
+	&:focus,
 	&:hover {
 		background-color: lighten($black, 10%);
 		border-color    : lighten($black, 10%);
 	}
-	&:focus {
-		outline: 0;
-		border : 1px dotted rgba(255, 255, 255, 0.5);
+	&::-moz-focus-inner {
+		border : 0;
+		padding: 0;
 	}
-	&.is-disabled {
+	&:-moz-focusring {
+		outline: 1px dotted;
+	}
+	&.is-disabled,
+	&[disabled] {
 		cursor : default;
 		cursor : not-allowed;
 		opacity: 0.75;
-		filter: alpha(opacity=0.75);
 		&:hover {
 			background-color: $black;
 			border-color    : $black;

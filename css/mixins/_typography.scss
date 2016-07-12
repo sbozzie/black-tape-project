@@ -21,6 +21,16 @@
 	font-size: $size + px;
 	font-size: $remSize * 1rem;
 }
+/* BOLD FONT - @include font-bold; */
+@mixin font-bold {
+	font-family: $font-heading;
+	font-weight: $bold;
+}
+/* NORMAL FONT - @include font-normal; */
+@mixin font-normal {
+	font-family: $font-body;
+	font-weight: $normal;
+}
 /* INLINE LIST - @include list-inline; */
 @mixin list-inline {
 	list-style  : none;
@@ -34,4 +44,10 @@
 @mixin list-unstyled {
 	list-style  : none;
 	padding-left: 0;
+}
+/* SELECTION HIGHLIGHT - @include selection-hightlight; */
+@mixin selection-hightlight {
+	background-color: $highlight-color;
+	color           : invert($text-color);
+	text-shadow     : none;
 }
