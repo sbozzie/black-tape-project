@@ -8,6 +8,12 @@
 			padding-right: ($gutter / 2);
 		}
 	}
+	@if $position == 'content' {
+		padding: ($gutter / 3);
+		@include break-min($md-break) {
+			padding: ($gutter / 2);
+		}
+	}
 	@else if $position == 'left' {
 		padding-left: ($gutter / 3);
 		@include break-min($md-break) {
