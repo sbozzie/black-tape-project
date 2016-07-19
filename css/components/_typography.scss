@@ -15,6 +15,10 @@ h6 {
 h1 {
 	@include text-size($h1);
 	@include text-margin($h1);
+	@include break-max($md-break) {
+		 @include text-size($h1 / $title-height);
+		@include text-margin($h1);
+	}
 }
 .heading2,
 h2 {
@@ -76,12 +80,15 @@ a {
 	color                       : $link-color;
 	cursor                      : pointer;
 	text-decoration             : underline;
+	-webkit-transition          : color $transition1 ease-in;
+	transition                  : color $transition1 ease-in;
 	/* remove gaps in links underline in iOS 8+ and safari 8+ */
 	-webkit-text-decoration-skip: objects;
 	&:focus,
 	&:hover {
-		color          : $link-color;
-		text-decoration: none;
+		color             : lighten($link-color, 25%);
+		-webkit-transition: color $transition1 ease-out;
+		transition        : color $transition1 ease-out;
 	}
 	&:active,
 	&:hover {

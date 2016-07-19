@@ -1,18 +1,20 @@
 /* Z-INDEX */
-$index0  : -1;
-$index1  : 100;
-$index2  : 200;
-$index3  : 300;
-$index4  : 400;
-$index5  : 500;
-$index6  : 600;
-$index7  : 700;
-$index8  : 800;
-$index9  : 900;
-$index10 : 1000;
+$index0     : -1;
+$index1     : 100;
+$index2     : 200;
+$index3     : 300;
+$index4     : 400;
+$index5     : 500;
+$index6     : 600;
+$index7     : 700;
+$index8     : 800;
+$index9     : 900;
+$index10    : 1000;
 /* VARIABLE IMPORTS */
 @import "../variables/_colors";
 @import "../variables/_grid";
 @import "../variables/_typography";
 /* PATHS */
-$img-path: "../img/"; //usage: background-image: url("#{$img-path}image.format");
+$img-path   : "../img/"; //usage: background-image: url("#{$img-path}image.format");
+/* TRANSITION TIMES */
+$transition1: 0.3s;

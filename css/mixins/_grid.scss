@@ -49,17 +49,10 @@
 	float   : left;
 	position: relative;
 	@if $flexbox == 'yes' {
-		-webkit-box-flex   : 0;
-		-webkit-flex       : 0 0 auto;
-		-ms-flex           : 0 0 auto;
-		flex               : 0 0 auto;
-		-webkit-box-flex   : 0;
-		-webkit-flex-grow  : 0;
-		-ms-flex-positive  : 0;
-		flex-grow          : 0;
-		-webkit-flex-shrink: 0;
-		-ms-flex-negative  : 0;
-		flex-shrink        : 0;
+		-webkit-box-flex: 0;
+		-webkit-flex    : 0 0 auto;
+		-ms-flex        : 0 0 auto;
+		flex            : 0 0 auto;
 	}
 }
 /* GRID GENERATION - @include col(columns); */

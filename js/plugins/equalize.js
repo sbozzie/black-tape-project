@@ -1,6 +1,6 @@
 ﻿
 var equalize = function() {
-	var disableOnMaxWidth = 768;
+	var disableOnMaxWidth = 991;
 
 	var grouped = {};
 	var elements = $('*[data-same-height]');

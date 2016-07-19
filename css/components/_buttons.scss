@@ -31,17 +31,23 @@
 	-webkit-appearance : none;
 	-moz-appearance    : none;
 	appearance         : none;
+	-webkit-transition : color $transition1 ease-in, background-color $transition1 ease-in, border $transition1 ease-in, box-shadow $transition1 ease-in;
+	transition         : color $transition1 ease-in, background-color $transition1 ease-in, border $transition1 ease-in, box-shadow $transition1 ease-in;
 	&:focus,
 	&:hover {
-		background-color: lighten($black, 10%);
-		border-color    : lighten($black, 10%);
+		background-color  : lighten($black, 15%);
+		border-color      : lighten($black, 15%);
+		box-shadow        : inset 0 0 10px transparentize($black, 0.25);
+		color             : $white;
+		-webkit-transition: color $transition1 ease-out, background-color $transition1 ease-out, border-color $transition1 ease-out, box-shadow $transition1 ease-out;
+		transition        : color $transition1 ease-out, background-color $transition1 ease-out, border-color $transition1 ease-out, box-shadow $transition1 ease-out;
 	}
 	&::-moz-focus-inner {
 		border : 0;
 		padding: 0;
 	}
 	&:-moz-focusring {
-		outline: 1px dotted;
+		outline: 1px solid;
 	}
 	&.is-disabled,
 	&[disabled] {
@@ -51,16 +57,26 @@
 		&:hover {
 			background-color: $black;
 			border-color    : $black;
+			box-shadow      : none;
 			color           : $white;
 		}
 	}
 	&--primary {
 		background-color: $brand3;
 		border-color    : $brand3;
-		color           : $white;
+		&:focus,
 		&:hover {
 			background-color: lighten($brand3, 10%);
 			border-color    : lighten($brand3, 10%);
+		}
+		&.is-disabled,
+		&[disabled] {
+			&:hover {
+				background-color: $brand3;
+				border-color    : $brand3;
+				box-shadow      : none;
+				color           : $white;
+			}
 		}
 	}
 }

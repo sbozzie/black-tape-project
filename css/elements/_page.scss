@@ -27,9 +27,8 @@
 	@include col(12);
 	@include padding(side);
 	border: 1px solid $gray;
-	@include break-min($md-break) {
-		/**/
-		@include col(6);
+	@include break-min($lg-break) {
+		 @include col(6);
 	}
 	&__intro {
 		@include columns;

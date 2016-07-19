@@ -1,8 +1,8 @@
 <!doctype html>
 
-<!--[if lt IE 10 ]> <html class="lt-ie10 no-js no-svg" lang="en"> <![endif]-->
+<!--[if lt IE 10 ]> <html class="lt-ie10 no-js no-svg no-flexbox" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!-->
-<html class="no-js no-svg" lang="en">
+<html class="no-js no-svg no-flexbox" lang="en">
 	<!--<![endif]-->
 
 	<head>
@@ -62,6 +62,16 @@
 			}
 		</script>
 
+		<!-- detect flexbox -->
+		<script>
+			var doc = document.body || document.documentElement;
+			var style = doc.style;
+
+			if (style.webkitFlexWrap == '' || style.msFlexWrap == '' || style.flexWrap == '') {
+				document.documentElement.className = document.documentElement.className.replace("no-flexbox", "flexbox");
+			}
+		</script>
+
 		<!-- CSS -->
 		<link href="css/styles.min.css" rel="stylesheet"/>
 
@@ -69,11 +79,11 @@
 
 	<body>
 
-		<div class="body-wrapper">
+		<div class="body-wrapper" id="jScrollToLocation">
 
 			<div class="content-wrapper">
 
-				<div class="col-test">
+				<div class="col-test" data-same-height="colTest1">
 					<div class="col-test__intro">
 						<h1>Vivamus volutpat tellus ut condimentum imperdiet.</h1>
 						<p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis aliquet urna, non maximus enim feugiat vestibulum. Aenean euismod augue tellus.</p>
@@ -116,7 +126,8 @@
 					<p>Integer elementum volutpat augue a porttitor. Morbi et facilisis leo. Phasellus a elementum lacus. Suspendisse at feugiat est, quis volutpat ex.</p>
 					<h6>Heading 6</h6>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis aliquet urna, non maximus enim feugiat vestibulum. Aenean euismod augue tellus.</p>
-					<p>Integer elementum volutpat augue a porttitor. Morbi et facilisis leo. Phasellus a elementum lacus. Suspendisse at feugiat est, quis volutpat ex.</p>
+					<p>Integer elementum volutpat augue a porttitor. Morbi et facilisis leo. Phasellus a elementum lacus. Suspendisse
+						<a>at feugiat est</a>, quis volutpat ex.</p>
 					<ol>
 						<li>Id efficitur sapien tincidunt et
 							<ol>
@@ -133,10 +144,10 @@
 						<li>Id efficitur sapien tincidunt et</li>
 						<li>Id efficitur sapien tincidunt et</li>
 					</ol>
-					<button class="button">Button Style</button>
+					<button class="button" id="jScrollTo">Button Style</button>
 					<a class="button is-disabled">Disabled Style</a>
 				</div>
-				<div class="col-test">
+				<div class="col-test" data-same-height="colTest1">
 					<fieldset>
 						<form>
 							<div>
@@ -173,13 +184,14 @@
 					</fieldset>
 					<button class="button button--primary">Primary Style</button>
 				</div>
-				<div class="col-test">
+				<div class="col-test" data-same-height="colTest2">
 					<p>Third Column</p>
+					<img data-src="holder.js/100px200?bg=16151b" alt=""/>
 				</div>
-				<div class="col-test">
+				<div class="col-test" data-same-height="colTest2">
 					<p>Fourth Column</p>
 				</div>
-				<div class="col-test">
+				<div class="col-test" data-same-height="colTest3">
 					<p>Fifth Column</p>
 				</div>
 
@@ -188,6 +200,13 @@
 
 		</div>
 		<!-- END: bodyWrapper -->
+
+		<!-- fastclick polyfill -->
+		<script>
+			window.addEventListener("load", function () {
+				new FastClick(document.body);
+			}, false);
+		</script>
 
 		<!-- javescript -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
