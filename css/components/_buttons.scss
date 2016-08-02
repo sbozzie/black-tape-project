@@ -54,29 +54,16 @@
 		cursor : default;
 		cursor : not-allowed;
 		opacity: 0.75;
-		&:hover {
-			background-color: $black;
-			border-color    : $black;
-			box-shadow      : none;
-			color           : $white;
-		}
 	}
 	&--primary {
 		background-color: $brand3;
 		border-color    : $brand3;
+		color           : $white;
 		&:focus,
 		&:hover {
 			background-color: lighten($brand3, 10%);
 			border-color    : lighten($brand3, 10%);
-		}
-		&.is-disabled,
-		&[disabled] {
-			&:hover {
-				background-color: $brand3;
-				border-color    : $brand3;
-				box-shadow      : none;
-				color           : $white;
-			}
+			color           : $white;
 		}
 	}
 }
