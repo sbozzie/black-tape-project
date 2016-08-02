@@ -1,33 +1,13 @@
 /* FLUID CONTAINER - @include container-fluid; */
 @mixin container-fluid {
+	 @include clearfix;
 	margin-left : auto;
 	margin-right: auto;
 	width       : 100%;
-	@include clearfix;
-	@if $flexbox == 'yes' {
-		-webkit-box-flex      : 0;
-		-webkit-flex          : 0 1 auto;
-		-ms-flex              : 0 1 auto;
-		flex                  : 0 1 auto;
-		-webkit-flex-wrap     : wrap;
-		-ms-flex-wrap         : wrap;
-		flex-wrap             : wrap;
-		-webkit-box-orient    : horizontal;
-		-webkit-box-direction : normal;
-		-webkit-flex-direction: row;
-		-ms-flex-direction    : row;
-		flex-direction        : row;
-		display               : -webkit-box;
-		display               : -webkit-flex;
-		display               : -ms-flexbox;
-		display               : flex;
-	}
 }
 /* FIXED WIDTH CONTAINER - @include container; */
 @mixin container {
-	/* - Import Base */
-	@include container-fluid;
-	/* - Add Fixed Widths */
+	 @include container-fluid;
 	@include break-min($sm-break) {
 		width: $sm-width;
 	}
@@ -44,25 +24,46 @@
 		width: $xx-width;
 	}
 }
+/* FLEX CONTAINER - @include flex-container; */
+@mixin flex-container {
+	-webkit-box-flex      : 0;
+	-webkit-flex          : 0 1 auto;
+	-ms-flex              : 0 1 auto;
+	flex                  : 0 1 auto;
+	-webkit-flex-wrap     : wrap;
+	-ms-flex-wrap         : wrap;
+	flex-wrap             : wrap;
+	-webkit-box-orient    : horizontal;
+	-webkit-box-direction : normal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction    : row;
+	flex-direction        : row;
+	display               : -webkit-box;
+	display               : -webkit-flex;
+	display               : -ms-flexbox;
+	display               : flex;
+}
 /* COLUMN SETUP - @include columns; */
 @mixin columns {
 	float   : left;
 	position: relative;
-	@if $flexbox == 'yes' {
-		-webkit-box-flex: 0;
-		-webkit-flex    : 0 0 auto;
-		-ms-flex        : 0 0 auto;
-		flex            : 0 0 auto;
-	}
+}
+/* FLEX COLUMN - @include flex-columns; */
+@mixin flex-columns {
+	-webkit-box-flex: 0;
+	-webkit-flex    : 0 0 auto;
+	-ms-flex        : 0 0 auto;
+	flex            : 0 0 auto;
 }
 /* GRID GENERATION - @include col(columns); */
 @mixin col($col) {
 	width: ((100 / $columns) * $col) * 1%;
-	@if $flexbox == 'yes' {
-		-webkit-flex-basis     : ((100 / $columns) * $col) * 1%;
-		-ms-flex-preferred-size: ((100 / $columns) * $col) * 1%;
-		flex-basis             : ((100 / $columns) * $col) * 1%;
-	}
+}
+/* FLEX GENERATION - @include flex-col(columns); */
+@mixin flex-col($col) {
+	-webkit-flex-basis     : ((100 / $columns) * $col) * 1%;
+	-ms-flex-preferred-size: ((100 / $columns) * $col) * 1%;
+	flex-basis             : ((100 / $columns) * $col) * 1%;
 }
 /* GRID OFFSETS - @include col-push(columns); */
 @mixin col-push($col) {

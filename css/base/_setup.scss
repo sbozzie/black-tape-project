@@ -16,7 +16,7 @@
 	text-decoration: inherit;
 	vertical-align : inherit;
 }
-/* SET HTML5 ELEMENT DISPLAY */
+/* SET ELEMENT DISPLAY */
 article,
 aside,
 details,
@@ -27,19 +27,30 @@ header,
 main,
 menu,
 nav,
-section,
-summary {
+section {
 	display: block;
 }
-/* OTHER ELEMENT DISPLAY */
+summary {
+	display: list-item;
+}
 audio,
 canvas,
 progress,
 video {
 	display: inline-block;
 }
+audio:not([controls]) {
+	display: none;
+	height : 0;
+}
 progress {
 	vertical-align: baseline;
+}
+template {
+	display: none;
+}
+[hidden] {
+	display: none;
 }
 /* DOCUMENT SETUP */
 html {
@@ -89,13 +100,16 @@ body {
 	min-width          : 320px;
 	padding            : 0;
 }
-/* RESPONSIVE IMAGES */
+/* IMAGES */
 img {
 	border                : none;
 	display               : block;
 	height                : auto;
 	max-width             : 100%;
 	-ms-interpolation-mode: bicubic;
+}
+svg:not(:root) {
+	overflow: hidden;
 }
 /* TEXT SELECTION */
 ::-moz-selection {

@@ -80,19 +80,19 @@ a {
 	color                       : $link-color;
 	cursor                      : pointer;
 	text-decoration             : underline;
-	-webkit-transition          : color $transition1 ease-in;
-	transition                  : color $transition1 ease-in;
+	-webkit-transition          : color $transition ease-in;
+	transition                  : color $transition ease-in;
 	/* remove gaps in links underline in iOS 8+ and safari 8+ */
 	-webkit-text-decoration-skip: objects;
 	&:focus,
 	&:hover {
 		color             : lighten($link-color, 25%);
-		-webkit-transition: color $transition1 ease-out;
-		transition        : color $transition1 ease-out;
+		-webkit-transition: color $transition ease-out;
+		transition        : color $transition ease-out;
 	}
 	&:active,
 	&:hover {
-		outline-width: 0;
+		outline: none;
 	}
 }
 /* ORDERED & UNORDERED LISTS */

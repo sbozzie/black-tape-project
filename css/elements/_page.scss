@@ -11,11 +11,15 @@
 /* CONTENT WRAPPER */
 .content-wrapper {
 	@include container;
-	@include padding(side);
 	@include padding(bottom);
+	@include padding(side);
 	@include padding(top);
 	border-left : 3px solid $gray;
 	border-right: 3px solid $gray;
+	/* FLEXBOX */
+	.flexbox & {
+		@include flex-container;
+	}
 	/* IE9 FIX */
 	.lt-ie10 & {
 		max-width: $xx-width;
@@ -23,15 +27,26 @@
 }
 /* CONTENT TEST */
 .col-test {
-	@include columns;
 	@include col(12);
+	@include columns;
 	@include padding(side);
 	border: 1px solid $gray;
 	@include break-min($lg-break) {
 		 @include col(6);
 	}
-	&__intro {
-		@include columns;
+	/* FLEXBOX */
+	.flexbox & {
+		@include flex-col(12);
+		@include flex-columns;
+		@include break-min($lg-break) {
+			 @include flex-col(6);
+		}
+	}
+}
+/* NO JS */
+.no-js {
+	.col-test {
 		@include col(12);
+		@include columns;
 	}
 }
