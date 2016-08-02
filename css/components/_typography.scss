@@ -80,15 +80,15 @@ a {
 	color                       : $link-color;
 	cursor                      : pointer;
 	text-decoration             : underline;
-	-webkit-transition          : color $transition ease-in;
-	transition                  : color $transition ease-in;
+	-webkit-transition          : color $transition-in;
+	transition                  : color $transition-in;
 	/* remove gaps in links underline in iOS 8+ and safari 8+ */
 	-webkit-text-decoration-skip: objects;
 	&:focus,
 	&:hover {
 		color             : lighten($link-color, 25%);
-		-webkit-transition: color $transition ease-out;
-		transition        : color $transition ease-out;
+		-webkit-transition: color $transition-out;
+		transition        : color $transition-out;
 	}
 	&:active,
 	&:hover {

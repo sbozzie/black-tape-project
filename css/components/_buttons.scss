@@ -31,16 +31,20 @@
 	-webkit-appearance : none;
 	-moz-appearance    : none;
 	appearance         : none;
-	-webkit-transition : color $transition ease-in, background-color $transition ease-in, border $transition ease-in, box-shadow $transition ease-in;
-	transition         : color $transition ease-in, background-color $transition ease-in, border $transition ease-in, box-shadow $transition ease-in;
+	-webkit-transition : color $transition-in, background-color $transition-in, border $transition-in, box-shadow $transition-in;
+	transition         : color $transition-in, background-color $transition-in, border $transition-in, box-shadow $transition-in;
 	&:focus,
 	&:hover {
 		background-color  : lighten($black, 15%);
 		border-color      : lighten($black, 15%);
 		box-shadow        : inset 0 0 10px transparentize($black, 0.25);
 		color             : $white;
-		-webkit-transition: color $transition ease-out, background-color $transition ease-out, border-color $transition ease-out, box-shadow $transition ease-out;
-		transition        : color $transition ease-out, background-color $transition ease-out, border-color $transition ease-out, box-shadow $transition ease-out;
+		-webkit-transition: color $transition-out, background-color $transition-out, border-color $transition-out, box-shadow $transition-out;
+		transition        : color $transition-out, background-color $transition-out, border-color $transition-out, box-shadow $transition-out;
+	}
+	&:active,
+	&:hover {
+		outline: none;
 	}
 	&::-moz-focus-inner {
 		border : 0;
