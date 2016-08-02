@@ -2,8 +2,8 @@
 @mixin font-face($family-name, $font-id, $font-name, $font-weight, $font-style) {
 	 @font-face{
 		font-family: "#{$family-name}";
-		src        : url("../fonts/#{$font-name}.eot");
-		src        : url("../fonts/#{$font-name}.eot?#iefix") format("embedded-opentype"), url("../fonts/#{$font-name}.woff") format("woff"), url("../fonts/#{$font-name}.ttf") format("truetype"), url("../fonts/#{$font-name}.svg##{$font-id}") format("svg");
+		src        : url("#{$font-path}#{$font-name}.eot");
+		src        : url("#{$font-path}#{$font-name}.eot?#iefix") format("embedded-opentype"), url("#{$font-path}#{$font-name}.woff") format("woff"), url("#{$font-path}#{$font-name}.ttf") format("truetype"), url("#{$font-path}#{$font-name}.svg##{$font-id}") format("svg");
 		font-style : $font-style;
 		font-weight: $font-weight;
 	}
