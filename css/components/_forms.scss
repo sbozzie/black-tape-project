@@ -6,9 +6,13 @@ input,
 optgroup,
 select,
 textarea {
-	font  : inherit;
+	font-family: sans-serif;
 	/* 1 */
-	margin: 0;
+	font-size  : 100%;
+	/* 1 */
+	line-height: 1.15;
+	/* 1 */
+	margin     : 0;
 	/* 2 */
 }
 /**
@@ -37,9 +41,9 @@ select {
  * Change the border, margin, and padding in all browsers (opinionated).
  */
 fieldset {
-	border : 1px solid #c0c0c0;
+	border : none;
 	margin : 0;
-	padding: 0.35em 0.625em 0.75em;
+	padding: 0;
 }
 /**
  * 1. Correct the text wrapping in Edge and IE.

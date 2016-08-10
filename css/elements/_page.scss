@@ -1,3 +1,9 @@
+/* BODY */
+body {
+	background-image   : url("#{$img-path}concrete.png");
+	background-position: top left;
+	background-repeat  : repeat;
+}
 /* BODY WRAPPER */
 .body-wrapper {
 	@include container-fluid;
@@ -5,8 +11,8 @@
 	background-size  : 100% ($line-height * 1rem);
 	border-left      : 1px solid $gray;
 	border-right     : 1px solid $gray;
-	background-image : -webkit-linear-gradient(top, $grey 0, transparentize($white, 1) 2px);
-	background-image : linear-gradient(to bottom, $grey 0, transparentize($white, 1) 2px);
+	background-image : -webkit-linear-gradient(top, transparentize($grey, 0.4) 0, transparentize($white, 1) 2px);
+	background-image : linear-gradient(to bottom, transparentize($grey, 0.4) 0, transparentize($white, 1) 2px);
 }
 /* CONTENT WRAPPER */
 .content-wrapper {

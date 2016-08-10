@@ -13,10 +13,11 @@ $index10       : 1000;
 /* VARIABLE IMPORTS */
 @import "../variables/_colors";
 @import "../variables/_grid";
+@import "../variables/_layout";
 @import "../variables/_typography";
 /* PATHS */
 $img-path      : "../img/"; //usage: background-image: url("#{$img-path}image.format");
-$font-path     : "../fonts/"; //usage: background-image: url("#{$img-path}image.format");
+$font-path     : "../fonts/"; //usage: #{$font-path};
 /* TRANSITION TIMES */
 $transition-in : 0.3s ease-in;
 $transition-out: 0.3s ease-out;

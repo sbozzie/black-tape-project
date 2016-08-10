@@ -92,13 +92,10 @@ html {
 }
 body {
 	@include text-size($text-size);
-	background-color   : $body-color;
-	background-image   : url("#{$img-path}concrete.png");
-	background-position: top left;
-	background-repeat  : repeat;
-	margin             : 0;
-	min-width          : 320px;
-	padding            : 0;
+	background-color: $body-color;
+	margin          : 0;
+	min-width       : 320px;
+	padding         : 0;
 }
 /* IMAGES */
 img {

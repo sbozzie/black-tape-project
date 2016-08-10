@@ -1,12 +1,12 @@
-/* SIDE-PADDING - @include padding; */
-@mixin padding($position) {
-	@if $position == 'content' {
+/* PADDING - @include padding(value); */
+@mixin padding($value) {
+	@if $value == 'content' {
 		padding: ($gutter / 3);
 		@include break-min($md-break) {
 			padding: ($gutter / 2);
 		}
 	}
-	@if $position == 'side' {
+	@if $value == 'side' {
 		padding-left : ($gutter / 3);
 		padding-right: ($gutter / 3);
 		@include break-min($md-break) {
@@ -14,32 +14,43 @@
 			padding-right: ($gutter / 2);
 		}
 	}
-	@else if $position == 'left' {
+	@if $value == 'left' {
 		padding-left: ($gutter / 3);
 		@include break-min($md-break) {
 			padding-left: ($gutter / 2);
 		}
 	}
-	@else if $position == 'right' {
+	@if $value == 'right' {
 		padding-right: ($gutter / 3);
 		@include break-min($md-break) {
 			padding-right: ($gutter / 2);
 		}
 	}
-	@else if $position == 'top' {
+	@if $value == 'top' {
 		padding-top: $gutter;
 		@include break-min($md-break) {
 			padding-top: ($gutter * 2);
 		}
 	}
-	@else if $position == 'bottom' {
+	@if $value == 'bottom' {
 		padding-bottom: $gutter;
 		@include break-min($md-break) {
 			padding-bottom: ($gutter * 2);
 		}
 	}
 }
-/* POSITIONING - @include position($value, $position); */
+/* MARGIN - @include margin(value); */
+@mixin margin($position) {
+	@if $position == 'row' {
+		margin-left : ($gutter / -3);
+		margin-right: ($gutter / -3);
+		@include break-min($md-break) {
+			margin-left : ($gutter / -2);
+			margin-right: ($gutter / -2);
+		}
+	}
+}
+/* POSITIONING - @include position(value, position); */
 @mixin position($value, $position) {
 	@if $value == 'vertical' {
 		position         : $position;
@@ -47,7 +58,7 @@
 		-webkit-transform: translateY(-50%);
 		transform        : translateY(-50%);
 	}
-	@else if $value == 'center' {
+	@if $value == 'center' {
 		position         : $position;
 		top              : 50%;
 		right            : 50%;
