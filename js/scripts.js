@@ -61,8 +61,7 @@
 		return fn ? this.bind('scroll', debounce(fn, threshhold)) : this.trigger(sr);
 	};
 
-})(jQuery, 'smartscroll');
-﻿
+})(jQuery, 'smartscroll');﻿
 var equalize = function() {
 	var disableOnMaxWidth = 991;
 
@@ -104,8 +103,7 @@ var equalize = function() {
 	});
 };
 
-var timeout = null;
-;
+var timeout = null;;
 (function() {
 	'use strict';
 
