@@ -6,7 +6,7 @@ This is my own custom framework. It is solely intended for web projects I build,
 
 ## Class Naming
 
-[namespace] [-ModuleOrComponent] [__ChildNode] [--variant]
+. [namespace] [-ModuleOrComponent] [__ChildNode] [--variant]
 
 ## SCSS Ordering
 
