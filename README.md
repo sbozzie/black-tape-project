@@ -7,11 +7,7 @@ This is my own custom framework. It is solely intended for web projects I build,
 ## Class Naming & Ordering
 
 [namespace]  
-
 [-ModuleOrComponent]  
-
 [__ChildNode]  
-
 [--variant]  
-
 HTML  
