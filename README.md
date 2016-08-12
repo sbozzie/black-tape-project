@@ -8,10 +8,19 @@ This is my own custom framework. It is solely intended for web projects I build,
 
 [namespace] [-ModuleOrComponent] [__ChildNode] [--variant]
 
-## CSS Ordering
+## SCSS Ordering
 
-[namespace]  
-[-ModuleOrComponent]  
-[__ChildNode]  
-[--variant]  
-HTML  
+```scss
+[namespace] {  
+	[-ModuleOrComponent] {  
+		[--variant] {  
+		}  
+	}  
+	[__ChildNode] {  
+		[--variant] {  
+		}  
+	}  
+	HTML {  
+	}  
+}  
+```
