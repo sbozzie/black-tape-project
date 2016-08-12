@@ -40,13 +40,25 @@
 	}
 }
 /* MARGIN - @include margin(value); */
-@mixin margin($position) {
-	@if $position == 'row' {
+@mixin margin($value) {
+	@if $value == 'row' {
 		margin-left : ($gutter / -3);
 		margin-right: ($gutter / -3);
 		@include break-min($md-break) {
 			margin-left : ($gutter / -2);
 			margin-right: ($gutter / -2);
+		}
+	}
+	@if $value == 'top' {
+		margin-top: ($gutter / 2);
+		@include break-min($md-break) {
+			margin-top: $gutter;
+		}
+	}
+	@if $value == 'bottom' {
+		margin-bottom: ($gutter / 2);
+		@include break-min($md-break) {
+			margin-bottom: $gutter;
 		}
 	}
 }

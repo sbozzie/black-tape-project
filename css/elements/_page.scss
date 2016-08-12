@@ -40,6 +40,15 @@ body {
 	@include break-min($lg-break) {
 		 @include col(6);
 	}
+	&__contentblock {
+		@include margin(bottom);
+		@include padding(content);
+		background-color: $black;
+		p {
+			color        : $white;
+			margin-bottom: 0;
+		}
+	}
 	/* FLEXBOX */
 	.flexbox & {
 		@include flex-col(12);
