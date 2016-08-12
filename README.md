@@ -4,7 +4,11 @@
 
 This is my own custom framework. It is solely intended for web projects I build, but I am very open to comments and suggestions for changes.
 
-## Class Naming & Ordering
+### Class Naming
+
+[namespace] [-ModuleOrComponent] [__ChildNode] [--variant]
+
+### CSS Ordering
 
 [namespace]  
 [-ModuleOrComponent]  
