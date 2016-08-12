@@ -11,16 +11,16 @@ This is my own custom framework. It is solely intended for web projects I build,
 ## SCSS Ordering
 
 ```scss
-[namespace] {  
-	[-ModuleOrComponent] {  
-		[--variant] {  
+.namespace {  
+	&-ModuleOrComponent {  
+		&--variant {  
 		}  
 	}  
-	[__ChildNode] {  
-		[--variant] {  
+	&__ChildNode {  
+		&--variant {  
 		}  
 	}  
-	HTML {  
+	.HTML {  
 	}  
 }  
 ```
