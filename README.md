@@ -14,10 +14,18 @@ This is my own custom framework. It is solely intended for web projects I build,
 .namespace {  
 	&-ModuleOrComponent {  
 		&--variant {  
+			.HTML {  
+			}  
+		}  
+		.HTML {  
 		}  
 	}  
 	&__ChildNode {  
 		&--variant {  
+			.HTML {  
+			}  
+		}  
+		.HTML {  
 		}  
 	}  
 	.HTML {  
