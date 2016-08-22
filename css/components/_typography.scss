@@ -109,6 +109,7 @@ ul {
 	}
 	li {
 		@include text-size($paragraph);
+		text-align: left;
 	}
 }
 /* - List Style (OL) */
